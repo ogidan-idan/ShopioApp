@@ -3,8 +3,23 @@ import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { COLORS } from "../constants/Colors";
 import { Page } from "../constants/GlobalStyles";
+import Home from "./Main"
+import SignUp from "./SignUp";
+import ForgotPassword from "./Forgotten";
 export default function App() {
   const [hidePassword, setHidePassword] = useState(true)
+  const [page, setPage]= useState("Login")
+  const [email, setEmail]=useState("")
+  const [password,setpassword]=useState("")
+  const ValidEmail="soluwole422@gmail.com"
+  const ValidPass="1234"
+  function gotologin(){
+    if (email==ValidEmail && password==ValidPass)
+      setPage("Home")
+    else 
+      alert("input valid credentials")
+  }
+  if (page== "Login"){
   return (
     <SafeAreaView style={Page.startpage}>
       <View style={Page.flex}>
@@ -23,6 +38,8 @@ export default function App() {
             <TextInput
               style={style.textInput}
               placeholder="Enter email or phone" inputMode="email"
+              value={email}
+              onChangeText={setEmail}
             />
             <Text style={{ marginTop: 15 }}>Password</Text>
             <View style={{ justifyContent: "center" }}>
@@ -31,6 +48,8 @@ export default function App() {
                 placeholder="Enter password"
                 inputMode="text"
                 secureTextEntry={hidePassword}
+                value={password}
+                onChangeText={setpassword}
               />
               <TouchableOpacity onPress={() => setHidePassword(!hidePassword)}
                 style={style.eyePos}>
@@ -40,11 +59,11 @@ export default function App() {
                     : require("../../assets/icons8-blind-30.png")} style={style.eyeSize} />
               </TouchableOpacity>
             </View>
-            <TouchableOpacity style={style.forgotBut}>
+            <TouchableOpacity onPress={()=> setPage("Forgotten")} style={style.forgotBut}>
               <Text style={style.forgotText}>Forgotten password?</Text>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity
+          <TouchableOpacity onPress={gotologin}
             style={style.loginBut}
           >
             <Text style={style.loginText}>
@@ -61,7 +80,7 @@ export default function App() {
             <View style={style.dashline} />
           </View>
           <View style={style.socialCon}>
-            <TouchableOpacity style={style.socialBut}>
+            <TouchableOpacity onPress={()=> alert("Google Login not available at the moment")} style={style.socialBut}>
               <Image
                 source={require("../../assets/icons8-google-48.png")}
                 style={style.socialImage}
@@ -69,7 +88,7 @@ export default function App() {
               <Text>Google</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={style.socialBut}>
+            <TouchableOpacity onPress={()=> alert("Facebook Login not available at the moment")} style={style.socialBut}>
               <Image
                 source={require("../../assets/icons8-facebook-logo-48.png")}
                 style={style.socialImage}
@@ -80,19 +99,29 @@ export default function App() {
         </View>
         <View style={style.signinView}>
           <Text>Don't have an account? </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> setPage("SignUp")}>
             <Text style={style.signinText}>Sign up</Text>
           </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
   );
+  }
+  else if (page== "Home"){
+    return<Home/>
+  }
+  else if (page== "Forgotten"){
+    return<ForgotPassword/>
+  }
+  else if (page== "SignUp"){
+    return<SignUp/>
+  }
 }
 const style = StyleSheet.create({
   imageView: { alignItems: "center", marginTop: 40, flex: 1 },
   imagesize: { width: 120, height: 120 },
   imageTitle: { fontSize: 30, fontWeight: "bold" },
-  container: { flex:0.1 },
+  container: { flex:3 },
   inputcon: { marginTop: 40, position: "relative" },
   textInput: { borderWidth: 1, borderColor: COLORS.borderGray, borderRadius: 10, paddingHorizontal: 20, height: 55 },
   eyePos: { position: "absolute", right: 10 },

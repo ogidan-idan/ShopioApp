@@ -2,35 +2,30 @@ import { View, Image, Text, TouchableOpacity, StyleSheet } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { COLORS } from "../constants/Colors"
 import { useState } from "react"
-import Cartbut from "../components/cartbut"
-import MainApp from "./Main"
-import Checkout from "./CheckOut"
+import Home from "./Home"
 
 export default function ProductDetails() {
-    const [page, setPage] =useState("ProductDetails")
-    if (page=="Home"){
-        return<MainApp/>
-    }
-    if (page=="CheckOut"){
-        return<Checkout/>
-    }
-    return (
-        <SafeAreaView style={style.setPage}>
-            <View style={style.headerRow}>
-                <TouchableOpacity onPress={()=> setPage("Home") }>
-                    <Image  source={require("../../assets/icons8-less-than-50.png")} style={style.goback} />
+     const [page, setPage] =useState("ProductDetails")
+        if (page=="Home"){
+            return<Home/>
+        }
+        return (
+            <SafeAreaView style={style.setPage}>
+                <View style={style.headerRow}>
+                    <TouchableOpacity onPress={()=> setPage("Home") }>
+                    <Image source={require("../../assets/icons8-less-than-50.png")} style={style.goback} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={()=> alert("unavialable at the moment")}>
+                <TouchableOpacity  onPress={()=> alert("unavialable at the moment")}>
                     <Image source={require("../../assets/icons8-favorite-100.png")} style={style.goback} />
                 </TouchableOpacity>
             </View>
 
             <View style={style.imageWrapper}>
-                <Image source={require("../../assets/Copilot_20260430_115826.png")} style={style.productImage} resizeMode="contain" />
+                <Image source={require("../../assets/Copilot_20260430_115856.png")} style={style.productImage} resizeMode="contain" />
             </View>
 
             <View style={style.detailsWrapper}>
-                <Text style={style.productTitle}>Master Watch</Text>
+                <Text style={style.productTitle}>Wireless Headphone</Text>
 
                 <View style={style.ratingRow}>
                     <Image source={require("../../assets/icons8-star-96 (1).png")} style={style.star} />
@@ -42,12 +37,11 @@ export default function ProductDetails() {
                     <Text>(0 Reviews)</Text>
                 </View>
 
-                <Text style={style.price}>$59.99</Text>
+                <Text style={style.price}>$49.99</Text>
                 <Text style={style.sectionLabel}>Description</Text>
                 <Text style={style.description}>
-                    A modern wristwatch combining elegance, durability, and accurate performance.
+                    Premium headphones delivering crystal‑clear sound, deep bass, and all‑day comfort.
                 </Text>
-                <Cartbut setPage={setPage}/>
             </View>
         </SafeAreaView>
     )
