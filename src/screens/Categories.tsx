@@ -1,5 +1,6 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet } from "react-native";
+<<<<<<< HEAD
 import { COLORS } from "../constants/Colors";
 import { useState } from "react";
 import Home from "./Home"
@@ -16,6 +17,14 @@ export default function Categories({ goHome }: CategoriesProps) {
         <SafeAreaView style={style.setPage}>
             <View style={style.headerRow}>
                 <TouchableOpacity onPress={goHome}>
+=======
+
+export default function Categories() {
+    return (
+        <SafeAreaView style={style.setPage}>
+            <View style={style.headerRow}>
+                <TouchableOpacity>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                     <Image source={require("../../assets/icons8-less-than-50.png")} style={style.goback} />
                 </TouchableOpacity>
                 <Text style={style.headerTitle}>Categories</Text>
@@ -24,7 +33,11 @@ export default function Categories({ goHome }: CategoriesProps) {
             <View style={style.scrollWrapper}>
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={style.scrollContent}>
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-ipad-80.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Electronics</Text>
@@ -33,7 +46,11 @@ export default function Categories({ goHome }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-lipstick-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Beauty</Text>
@@ -42,7 +59,11 @@ export default function Categories({ goHome }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-sports-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Sport</Text>
@@ -51,7 +72,11 @@ export default function Categories({ goHome }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-women`s-shoe-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Shoes</Text>
@@ -60,7 +85,11 @@ export default function Categories({ goHome }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-long-formal-dress-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Clothes</Text>
@@ -69,7 +98,11 @@ export default function Categories({ goHome }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-embroidery-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Embroidery</Text>
@@ -78,7 +111,11 @@ export default function Categories({ goHome }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-baby-product-64.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Baby Product</Text>
@@ -87,7 +124,11 @@ export default function Categories({ goHome }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-book-94.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Books</Text>
@@ -96,7 +137,11 @@ export default function Categories({ goHome }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-chair-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Furnitures</Text>
@@ -105,7 +150,11 @@ export default function Categories({ goHome }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-dining-room-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Utensil</Text>
@@ -114,7 +163,11 @@ export default function Categories({ goHome }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-plush-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Toys</Text>
@@ -123,7 +176,11 @@ export default function Categories({ goHome }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
+<<<<<<< HEAD
                         <TouchableOpacity onPress={()=> setpag("NotAvil")} style={style.categ}>
+=======
+                        <TouchableOpacity style={style.categ}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                             <Image source={require("../../assets/icons8-smartphone-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>SmartPhone</Text>
@@ -136,6 +193,7 @@ export default function Categories({ goHome }: CategoriesProps) {
             </View>
         </SafeAreaView>
     )
+<<<<<<< HEAD
     }
     else if (pag== "Home"){
         return<Home/>
@@ -143,6 +201,8 @@ export default function Categories({ goHome }: CategoriesProps) {
     else if (pag== "NotAvil"){
         return<NotAvil/>
     }
+=======
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
 }
 
 export const style = StyleSheet.create({
@@ -159,7 +219,11 @@ export const style = StyleSheet.create({
         flexDirection: "row", 
         alignItems: "center", 
         justifyContent: "space-between", 
+<<<<<<< HEAD
         backgroundColor: COLORS.lightGray, 
+=======
+        backgroundColor: "#f9f9f9", 
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
         borderRadius: 10, 
         padding: 15, 
         marginBottom: 15 
@@ -168,5 +232,9 @@ export const style = StyleSheet.create({
     catBut: { width: 50, height: 50 },
     texView: { flex: 1, marginLeft: 15 },
     catText: { fontSize: 18, fontWeight: "bold", marginBottom: 5 },
+<<<<<<< HEAD
     catNav: { width: 25, height: 25, tintColor: COLORS.deepGray }
+=======
+    catNav: { width: 25, height: 25, tintColor: "#888" }
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
 })

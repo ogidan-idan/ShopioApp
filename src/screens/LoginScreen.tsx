@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { COLORS } from "../constants/Colors";
 import { Page } from "../constants/GlobalStyles";
+<<<<<<< HEAD
 import Home from "./Main"
 import SignUp from "./SignUp";
 import ForgotPassword from "./Forgotten";
@@ -20,6 +21,10 @@ export default function App() {
       alert("input valid credentials")
   }
   if (page== "Login"){
+=======
+export default function App() {
+  const [hidePassword, setHidePassword] = useState(true)
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
   return (
     <SafeAreaView style={Page.startpage}>
       <View style={Page.flex}>
@@ -38,8 +43,11 @@ export default function App() {
             <TextInput
               style={style.textInput}
               placeholder="Enter email or phone" inputMode="email"
+<<<<<<< HEAD
               value={email}
               onChangeText={setEmail}
+=======
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
             />
             <Text style={{ marginTop: 15 }}>Password</Text>
             <View style={{ justifyContent: "center" }}>
@@ -48,8 +56,11 @@ export default function App() {
                 placeholder="Enter password"
                 inputMode="text"
                 secureTextEntry={hidePassword}
+<<<<<<< HEAD
                 value={password}
                 onChangeText={setpassword}
+=======
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
               />
               <TouchableOpacity onPress={() => setHidePassword(!hidePassword)}
                 style={style.eyePos}>
@@ -59,11 +70,19 @@ export default function App() {
                     : require("../../assets/icons8-blind-30.png")} style={style.eyeSize} />
               </TouchableOpacity>
             </View>
+<<<<<<< HEAD
             <TouchableOpacity onPress={()=> setPage("Forgotten")} style={style.forgotBut}>
               <Text style={style.forgotText}>Forgotten password?</Text>
             </TouchableOpacity>
           </View>
           <TouchableOpacity onPress={gotologin}
+=======
+            <TouchableOpacity style={style.forgotBut}>
+              <Text style={style.forgotText}>Forgotten password?</Text>
+            </TouchableOpacity>
+          </View>
+          <TouchableOpacity
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
             style={style.loginBut}
           >
             <Text style={style.loginText}>
@@ -80,7 +99,11 @@ export default function App() {
             <View style={style.dashline} />
           </View>
           <View style={style.socialCon}>
+<<<<<<< HEAD
             <TouchableOpacity onPress={()=> alert("Google Login not available at the moment")} style={style.socialBut}>
+=======
+            <TouchableOpacity style={style.socialBut}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
               <Image
                 source={require("../../assets/icons8-google-48.png")}
                 style={style.socialImage}
@@ -88,7 +111,11 @@ export default function App() {
               <Text>Google</Text>
             </TouchableOpacity>
 
+<<<<<<< HEAD
             <TouchableOpacity onPress={()=> alert("Facebook Login not available at the moment")} style={style.socialBut}>
+=======
+            <TouchableOpacity style={style.socialBut}>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
               <Image
                 source={require("../../assets/icons8-facebook-logo-48.png")}
                 style={style.socialImage}
@@ -99,13 +126,18 @@ export default function App() {
         </View>
         <View style={style.signinView}>
           <Text>Don't have an account? </Text>
+<<<<<<< HEAD
           <TouchableOpacity onPress={()=> setPage("SignUp")}>
+=======
+          <TouchableOpacity>
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
             <Text style={style.signinText}>Sign up</Text>
           </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
   );
+<<<<<<< HEAD
   }
   else if (page== "Home"){
     return<Home/>
@@ -116,12 +148,18 @@ export default function App() {
   else if (page== "SignUp"){
     return<SignUp/>
   }
+=======
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
 }
 const style = StyleSheet.create({
   imageView: { alignItems: "center", marginTop: 40, flex: 1 },
   imagesize: { width: 120, height: 120 },
   imageTitle: { fontSize: 30, fontWeight: "bold" },
+<<<<<<< HEAD
   container: { flex:3 },
+=======
+  container: { flex:0.1 },
+>>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
   inputcon: { marginTop: 40, position: "relative" },
   textInput: { borderWidth: 1, borderColor: COLORS.borderGray, borderRadius: 10, paddingHorizontal: 20, height: 55 },
   eyePos: { position: "absolute", right: 10 },
