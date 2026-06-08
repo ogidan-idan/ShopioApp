@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react"
 import { View, Image, Text, TextInput, TouchableOpacity,Alert, ImageBackground, ScrollView, StyleSheet } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
@@ -13,22 +12,12 @@ import ProductDetails3 from "./ProductDetails copy 3"
 export default function Home() {
     const [pag, setpag]= useState("Home")
     if (pag=="Home"){
-=======
-import { View, Image, Text, TextInput, TouchableOpacity, ImageBackground, ScrollView, StyleSheet } from "react-native"
-import { SafeAreaView } from "react-native-safe-area-context"
-
-export default function Home() {
->>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
     return (
         <SafeAreaView style={style.container}>
             <View style={style.searchRow}>
                 <TextInput style={style.searchInput} placeholder="Search for products....." />
                 <Image source={require("../../assets/icons8-search-30.png")} style={style.searchIcon} />
-<<<<<<< HEAD
                 <TouchableOpacity onPress={()=>setpag("Notifications")}>
-=======
-                <TouchableOpacity>
->>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                     <Image source={require("../../assets/icons8-bell-24.png")} style={style.bellIcon} />
                 </TouchableOpacity>
             </View>
@@ -42,11 +31,7 @@ export default function Home() {
                 <Text style={style.bannerTitle}>50% OFF</Text>
                 <Text style={style.bannerText}>On Selected Items</Text>
 
-<<<<<<< HEAD
                 <TouchableOpacity onPress={()=> Alert.alert("Unfortunatly","Summer is over!!")} style={style.shopButton}>
-=======
-                <TouchableOpacity style={style.shopButton}>
->>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                     <Text style={style.shopButtonText}>Shop Now</Text>
                 </TouchableOpacity>
 
@@ -59,17 +44,12 @@ export default function Home() {
 
             <View style={style.textlabelview}>
                 <Text style={style.textlabel}>Categories</Text>
-<<<<<<< HEAD
                 <TouchableOpacity onPress={()=> setpag("Categories")}>
-=======
-                <TouchableOpacity>
->>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                     <Text style={style.seeMore}>See more</Text>
                 </TouchableOpacity>
             </View>
             <View>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={style.categoryScroll}>
-<<<<<<< HEAD
                     <TouchableOpacity onPress={()=> setpag("NotAvail")} style={style.bottonicon}>
                         <Image source={require("../../assets/icons8-ipad-80.png")} style={style.icon} resizeMode="center" />
                         <Text> Electronics</Text>
@@ -91,29 +71,6 @@ export default function Home() {
                         <Text> Clothes</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={()=> setpag("NotAvail")} style={style.bottonicon}>
-=======
-                    <TouchableOpacity style={style.bottonicon}>
-                        <Image source={require("../../assets/icons8-ipad-80.png")} style={style.icon} resizeMode="center" />
-                        <Text> Electronics</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={style.bottonicon}>
-                        <Image source={require("../../assets/icons8-sports-96.png")} style={style.icon} resizeMode="center" />
-                        <Text> Sport</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={style.bottonicon}>
-                        <Image source={require("../../assets/icons8-women`s-shoe-96.png")} style={style.icon} resizeMode="center" />
-                        <Text> Shoes</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={style.bottonicon}>
-                        <Image source={require("../../assets/icons8-long-formal-dress-96.png")} style={style.icon} resizeMode="center" />
-                        <Text> Fashion</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={style.bottonicon}>
-                        <Image source={require("../../assets/icons8-clothes-94.png")} style={style.icon} resizeMode="center" />
-                        <Text> Clothes</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={style.bottonicon}>
->>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                         <Image source={require("../../assets/icons8-embroidery-96.png")} style={style.icon} resizeMode="center" />
                         <Text> Embroidery</Text>
                     </TouchableOpacity>
@@ -121,11 +78,7 @@ export default function Home() {
             </View>
             <View style={style.textlabelview}>
                 <Text style={style.textlabel}>Popular product</Text>
-<<<<<<< HEAD
                 <TouchableOpacity onPress={()=> alert("option unavialable at the moment")}>
-=======
-                <TouchableOpacity>
->>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                     <Text style={style.seeMore}>See all</Text>
                 </TouchableOpacity>
             </View>
@@ -133,7 +86,6 @@ export default function Home() {
             <View style={style.productContainer}>
                 <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={style.productScroll}>
                     <View style={style.productview}>
-<<<<<<< HEAD
                         <TouchableOpacity onPress={()=>setpag("Product1")} style={style.bottonicon}>
                             <Image source={require("../../assets/Copilot_20260430_115826.png")} style={style.product} resizeMode="contain" />
                             <Text>Master Watch</Text>
@@ -153,34 +105,12 @@ export default function Home() {
                             <Image source={require("../../assets/Copilot_20260430_115906.png")} style={style.product} resizeMode="contain" />
                             <Text>Power Bank</Text>
                             <Text style={style.price}>$60.99</Text>
-=======
-                        <TouchableOpacity style={style.bottonicon}>
-                            <Image source={require("../../assets/Copilot_20260430_115826.png")} style={style.product} resizeMode="contain" />
-                            <Text>Wireless Headphones</Text>
-                            <Text style={style.price}>$6.77</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={style.bottonicon}>
-                            <Image source={require("../../assets/Copilot_20260430_115847.png")} style={style.product} resizeMode="contain" />
-                            <Text>Wireless Headphones</Text>
-                            <Text style={style.price}>$6.77</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={style.bottonicon}>
-                            <Image source={require("../../assets/Copilot_20260430_115856.png")} style={style.product} resizeMode="contain" />
-                            <Text>Wireless Headphones</Text>
-                            <Text style={style.price}>$6.77</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={style.bottonicon}>
-                            <Image source={require("../../assets/Copilot_20260430_115906.png")} style={style.product} resizeMode="contain" />
-                            <Text>Wireless Headphones</Text>
-                            <Text style={style.price}>$6.77</Text>
->>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
             </View>
         </SafeAreaView>
     )
-<<<<<<< HEAD
     }
     else if (pag== "Notifications"){
         return<Notifications/>
@@ -203,8 +133,6 @@ export default function Home() {
     else if (pag== "Categories"){
         return<Categories/>
     }
-=======
->>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
 }
 
 export const style = StyleSheet.create({

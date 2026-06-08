@@ -46,19 +46,6 @@ export default function ForgotPassword() {
                     placeholder="Enter your email"
                     value={email}
                     onChangeText={setEmail}
-                    keyboardType="email-address"
-                />
-            </View>
-
-            {/* Reset Button */}
-            <TouchableOpacity onPress={handleReset} style={style.resetButton} >
-                <Text style={style.resetText}>Send Reset Link</Text>
-            </TouchableOpacity>
-
-            {/* Back to Login */}
-            <TouchableOpacity onPress={() => setPage("Login")} style={style.backButton}>
-                <Text style={style.backText}>Back to Login</Text>
-            </TouchableOpacity>
         </SafeAreaView>
     );
 
