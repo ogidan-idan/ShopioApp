@@ -1,7 +1,6 @@
 import { View, Image, Text, TouchableOpacity, StyleSheet } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { COLORS } from "../constants/Colors"
-<<<<<<< HEAD
 import { useState } from "react"
 import Cartbut from "../components/cartbut"
 import MainApp from "./Main"
@@ -22,17 +21,6 @@ export default function ProductDetails() {
                     <Image  source={require("../../assets/icons8-less-than-50.png")} style={style.goback} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=> alert("unavialable at the moment")}>
-=======
-
-export default function ProductDetails() {
-    return (
-        <SafeAreaView style={style.setPage}>
-            <View style={style.headerRow}>
-                <TouchableOpacity>
-                    <Image source={require("../../assets/icons8-less-than-50.png")} style={style.goback} />
-                </TouchableOpacity>
-                <TouchableOpacity>
->>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
                     <Image source={require("../../assets/icons8-favorite-100.png")} style={style.goback} />
                 </TouchableOpacity>
             </View>
@@ -59,10 +47,7 @@ export default function ProductDetails() {
                 <Text style={style.description}>
                     A modern wristwatch combining elegance, durability, and accurate performance.
                 </Text>
-<<<<<<< HEAD
                 <Cartbut setPage={setPage}/>
-=======
->>>>>>> 128fb8bd7c5a137402bf472dc375d8f3f1aff550
             </View>
         </SafeAreaView>
     )

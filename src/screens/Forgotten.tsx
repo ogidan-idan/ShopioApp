@@ -45,7 +45,8 @@ export default function ForgotPassword() {
                     style={style.input}
                     placeholder="Enter your email"
                     value={email}
-                    onChangeText={setEmail}
+                    onChangeText={setEmail} />
+            </View>
         </SafeAreaView>
     );
 
