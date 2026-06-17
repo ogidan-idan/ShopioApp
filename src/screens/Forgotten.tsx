@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, Button } from "react-native";
 import Loginscreen from "./LoginScreen"
 import { COLORS } from "../constants/Colors";
 export default function ForgotPassword() {
@@ -47,6 +47,16 @@ export default function ForgotPassword() {
                     value={email}
                     onChangeText={setEmail} />
             </View>
+            <TouchableOpacity onPress={handleReset} style={style.resetButton}>
+                <Text style={style.resetText}>
+                    Reset
+                </Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>setPage("Login")} style={style.backButton}>
+                <Text style={style.backText}>
+                    Go back
+                </Text>
+            </TouchableOpacity>
         </SafeAreaView>
     );
 

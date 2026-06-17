@@ -70,7 +70,7 @@ export const style = StyleSheet.create({
     qtyButton: { borderWidth: 1, borderColor: "#ccc", borderRadius: 5, paddingHorizontal: 10, paddingVertical: 2 },
     qtyValue: { marginHorizontal: 10, fontSize: 16 },
 
-    footer: { marginTop: "auto", paddingVertical: 20 },
+    footer: { marginTop: "auto", paddingVertical: 20,marginBottom:30 },
     totalRow: { flexDirection: "row", justifyContent: "space-between", marginBottom: 15 },
     totalLabel: { fontSize: 20, fontWeight: "bold" },
     totalValue: { fontSize: 20, fontWeight: "bold", color: "#333" },

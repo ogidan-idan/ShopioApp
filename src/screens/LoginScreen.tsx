@@ -11,8 +11,8 @@ export default function App() {
   const [page, setPage]= useState("Login")
   const [email, setEmail]=useState("")
   const [password,setpassword]=useState("")
-  const ValidEmail="login"
-  const ValidPass="1234"
+  const ValidEmail=""
+  const ValidPass=""
   function gotologin(){
     if (email==ValidEmail && password==ValidPass)
       setPage("Home")
