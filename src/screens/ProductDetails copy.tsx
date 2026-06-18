@@ -3,16 +3,23 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import { COLORS } from "../constants/Colors"
 import { useState } from "react"
 import Home from "./Home"
+import Cartbut from "../components/cartbut"
+import MainApp from "./Main"
+import Checkout from "./CheckOut"
 
-export default function ProductDetails() {
+type ProductProps={
+    goTo:(tab:string)=>void
+}
+
+export default function ProductDetails({goTo}:ProductProps) {
      const [page, setPage] =useState("ProductDetails")
-        if (page=="Home"){
-            return<Home/>
-        }
+        if (page=="CheckOut"){
+               return<Checkout/>
+           }
         return (
             <SafeAreaView style={style.setPage}>
                 <View style={style.headerRow}>
-                    <TouchableOpacity onPress={()=> setPage("Home") }>
+                    <TouchableOpacity onPress={()=> goTo("Home") }>
                     <Image source={require("../../assets/icons8-less-than-50.png")} style={style.goback} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=> alert("unavialable at the moment")}>
@@ -42,6 +49,7 @@ export default function ProductDetails() {
                 <Text style={style.description}>
                     “A stylish, durable bag with spacious compartments, secure closure, and versatile design for everyday use.
                 </Text>
+                <Cartbut setPage={setPage}/>
             </View>
         </SafeAreaView>
     )

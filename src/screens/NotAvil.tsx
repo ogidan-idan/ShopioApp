@@ -4,15 +4,16 @@ import { Page } from "../constants/GlobalStyles"
 import { COLORS } from "../constants/Colors"
 import { useState } from "react"
 import Home from "./Home"
-export default function Notifications() {
-    const [page, setPage] = useState("Notifications")
-    if (page == "Home") {
-        return <Home />
-    }
+
+type NotAvilProps={
+    goTo:(tab:string)=>void;
+}
+export default function Notifications({goTo} : NotAvilProps) {
+   
     return (
         <SafeAreaView style={Page.startpage}>
             <View style={styles.topheader}>
-                <TouchableOpacity onPress={() => setPage("Home")}>
+                <TouchableOpacity onPress={() => goTo("Home")}>
                     <Image source={require("../../assets/icons8-less-than-50.png")} style={styles.goback} />
                 </TouchableOpacity>
                 <Text style={styles.toptext}>

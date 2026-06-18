@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet,Text } from "react-native";
 import BottomTabs from "../components/Button";
 
 
@@ -11,6 +11,7 @@ import Cart from "../screens/Cart";
 import Profile from "../screens/Profile";
 import Notifications from "../screens/Notification";
 import NotAvil from "../screens/NotAvil";
+import NotAvail from "../screens/NotAvil copy";
 import ProductDetails from "./ProductDetails";
 import ProductDetails1 from "./ProductDetails copy"
 import ProductDetails2 from "./ProductDetails copy 2"
@@ -27,23 +28,27 @@ export default function MainApp() {
       case "Categories":
         return <Categories goTo={setActiveTab} />;
       case "Cart":
-        return <Cart />;
+        return <Cart goTo={setActiveTab}/>;
       case "Profile":
-        return <Profile />;
+        return <Profile goTo={setActiveTab}/>;
       case "Notifications":
         return <Notifications  goTo={setActiveTab}/>;
       case "NotAvil":
-        return <NotAvil />;
+        return <NotAvil  goTo={setActiveTab}/>;
+      case "NotAvail":
+        return <NotAvail  goTo={setActiveTab}/>;
       case "Product1":
-        return <ProductDetails/>;
+        return <ProductDetails goTo={setActiveTab}/>;
       case "Product2":
-        return <ProductDetails1/>;
+        return <ProductDetails1 goTo={setActiveTab}/>;
       case "Product3":
-        return <ProductDetails2 />;
+        return <ProductDetails2 goTo={setActiveTab}/>;
       case "Product4":
-        return <ProductDetails3 />;
+        return <ProductDetails3 goTo={setActiveTab}/>;
       default:
-        return <Home goTo={setActiveTab} />;
+        return( <View>
+          <Text>Page not found</Text>
+          </View>);
     }
   };
 

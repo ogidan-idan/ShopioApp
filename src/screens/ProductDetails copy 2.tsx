@@ -3,16 +3,24 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import { COLORS } from "../constants/Colors"
 import { useState } from "react"
 import Home from "./Home"
+import MainApp from "./Main"
+import Cartbut from "../components/cartbut"
+import Checkout from "./CheckOut"
 
-export default function ProductDetails() {
+type ProductProps={
+    goTo:(tab:string)=>void
+}
+
+export default function ProductDetails({goTo}:ProductProps) {
      const [page, setPage] =useState("ProductDetails")
-        if (page=="Home"){
-            return<Home/>
-        }
+      if (page=="CheckOut"){
+             return<Checkout/>
+         }
+        
         return (
             <SafeAreaView style={style.setPage}>
                 <View style={style.headerRow}>
-                    <TouchableOpacity onPress={()=> setPage("Home") }>
+                    <TouchableOpacity onPress={()=> goTo("Home") }>
                     <Image source={require("../../assets/icons8-less-than-50.png")} style={style.goback} />
                 </TouchableOpacity>
                 <TouchableOpacity  onPress={()=> alert("unavialable at the moment")}>
@@ -42,6 +50,7 @@ export default function ProductDetails() {
                 <Text style={style.description}>
                     Premium headphones delivering crystal‑clear sound, deep bass, and all‑day comfort.
                 </Text>
+                <Cartbut setPage={setPage}/>
             </View>
         </SafeAreaView>
     )

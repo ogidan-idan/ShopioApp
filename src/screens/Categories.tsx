@@ -21,7 +21,7 @@ export default function Categories({ goTo }: CategoriesProps) {
             <View style={style.scrollWrapper}>
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={style.scrollContent}>
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-ipad-80.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Electronics</Text>
@@ -30,7 +30,7 @@ export default function Categories({ goTo }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-lipstick-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Beauty</Text>
@@ -39,7 +39,7 @@ export default function Categories({ goTo }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-sports-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Sport</Text>
@@ -48,7 +48,7 @@ export default function Categories({ goTo }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-women`s-shoe-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Shoes</Text>
@@ -57,7 +57,7 @@ export default function Categories({ goTo }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-long-formal-dress-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Clothes</Text>
@@ -66,7 +66,7 @@ export default function Categories({ goTo }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-embroidery-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Embroidery</Text>
@@ -75,7 +75,7 @@ export default function Categories({ goTo }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-baby-product-64.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Baby Product</Text>
@@ -84,7 +84,7 @@ export default function Categories({ goTo }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-book-94.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Books</Text>
@@ -93,7 +93,7 @@ export default function Categories({ goTo }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-chair-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Furnitures</Text>
@@ -102,7 +102,7 @@ export default function Categories({ goTo }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-dining-room-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Utensil</Text>
@@ -111,7 +111,7 @@ export default function Categories({ goTo }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-plush-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>Toys</Text>
@@ -120,7 +120,7 @@ export default function Categories({ goTo }: CategoriesProps) {
                             <Image source={require("../../assets/icons8-more-than-96 (1).png")} style={style.catNav} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=> goTo("NotAvil")} style={style.categ}>
+                        <TouchableOpacity onPress={()=> goTo("NotAvail")} style={style.categ}>
                             <Image source={require("../../assets/icons8-smartphone-96.png")} style={style.catBut} resizeMode="center" />
                             <View style={style.texView}>
                                 <Text style={style.catText}>SmartPhone</Text>

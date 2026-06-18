@@ -4,15 +4,19 @@ import { Page } from "../constants/GlobalStyles"
 import { COLORS } from "../constants/Colors"
 import { useState } from "react"
 import Categories from "./Categories"
-export default function Notifications() {
+import MainApp from "./Main"
+type NotAvailProp={
+    goTo:(tab:string)=>void
+}
+export default function Notifications({goTo}:NotAvailProp) {
     const [page, setPage] = useState("Notifications")
     if (page == "Categories") {
-        return <Categories />
+        return <Categories goTo={MainApp}/>
     }
     return (
         <SafeAreaView style={Page.startpage}>
             <View style={styles.topheader}>
-                <TouchableOpacity onPress={() => setPage("Categories")}>
+                <TouchableOpacity onPress={() => goTo("Categories")}>
                     <Image source={require("../../assets/icons8-less-than-50.png")} style={styles.goback} />
                 </TouchableOpacity>
                 <Text style={styles.toptext}>
