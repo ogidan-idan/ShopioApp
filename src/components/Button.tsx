@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
+import { COLORS } from "../constants/Colors";
 
 type BottomTabsProps = {
   activeTab: string;
@@ -65,7 +66,7 @@ const style = StyleSheet.create({
     color: "#555",
   },
   activeLabel: {
-    color: "#007bff",
+    color: COLORS.primary,
     fontWeight: "bold",
   },
 });

@@ -2,9 +2,9 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native"
 import { COLORS } from "../constants/Colors"
 import { useState } from "react"
 type CartbutProps = {
-  setPage: (page: string) => void   // simple function type
+  goTo: (page: string) => void   // simple function type
 }
-export default function Cartbut({setPage}: CartbutProps) {
+export default function Cartbut({goTo}: CartbutProps) {
     const [count,setcount]=useState(1)
     return (
         <View style={butstyle.container}>
@@ -28,7 +28,7 @@ export default function Cartbut({setPage}: CartbutProps) {
                         Add to Cart
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={()=>setPage("CheckOut")} style={butstyle.butdesign2}>
+                <TouchableOpacity onPress={()=>goTo("Checkout")} style={butstyle.butdesign2}>
                     <Text style={butstyle.optiontext2}>
                         Buy Now
                     </Text>

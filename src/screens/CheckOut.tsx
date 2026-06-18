@@ -1,15 +1,20 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image } from "react-native";
 import { useState } from "react";
+import { COLORS } from "../constants/Colors";
 
-export default function Checkout() {
+type CheckOutProps={
+    goTo:(tab:string)=>void
+}
+
+export default function Checkout({goTo}:CheckOutProps) {
     const [selectedMethod, setSelectedMethod] = useState("card"); // default selection
 
     return (
         <SafeAreaView style={style.setPage}>
             {/* Header */}
             <View style={style.headerRow}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>goTo("Cart")}>
                     <Image source={require("../../assets/icons8-less-than-50.png")} style={style.goback} />
                 </TouchableOpacity>
                 <Text style={style.headerTitle}>Checkout</Text>
@@ -74,7 +79,7 @@ export default function Checkout() {
                 </View>
 
                 {/* Place Order Button */}
-                <TouchableOpacity style={style.confirmButton}>
+                <TouchableOpacity onPress={()=>goTo("Confirmation")} style={style.confirmButton}>
                     <Text style={style.confirmText}>Place Order</Text>
                 </TouchableOpacity>
             </ScrollView>
@@ -97,19 +102,19 @@ export const style = StyleSheet.create({
     cardText: { fontSize: 16, marginBottom: 5 },
 
     editButton: { alignSelf: "flex-end", marginTop: 10 },
-    editText: { color: "#007bff", fontWeight: "bold" },
+    editText: { color: COLORS.primary, fontWeight: "bold" },
 
     paymentOptions: { gap: 15 },
     paymentCard: { flexDirection: "row", alignItems: "center", backgroundColor: "#f1f1f1", borderRadius: 10, padding: 15 },
     paymentIcon: { width: 30, height: 30, marginRight: 10 },
     paymentText: { fontSize: 16, fontWeight: "bold" },
-    selectedCard: { borderWidth: 2, borderColor: "#007bff", backgroundColor: "#e6f0ff" },
+    selectedCard: { borderWidth: 2, borderColor: COLORS.primary, backgroundColor: "#e6f0ff" },
 
     summaryRow: { flexDirection: "row", justifyContent: "space-between", marginBottom: 8 },
     summaryLabel: { fontSize: 16, color: "#555" },
     summaryValue: { fontSize: 16, fontWeight: "bold" },
     totalValue: { fontSize: 18, fontWeight: "bold", color: "#000" },
 
-    confirmButton: { backgroundColor: "#007bff", padding: 15, borderRadius: 10, marginTop: 20 },
+    confirmButton: { backgroundColor: COLORS.primary, padding: 15, borderRadius: 10, marginTop: 20 },
     confirmText: { color: "#fff", textAlign: "center", fontSize: 18, fontWeight: "bold" }
 })

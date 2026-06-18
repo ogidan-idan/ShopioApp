@@ -12,10 +12,6 @@ type ProductProps={
 }
 
 export default function ProductDetails({goTo}:ProductProps) {
-     const [page, setPage] =useState("ProductDetails")
-      if (page=="CheckOut"){
-             return<Checkout/>
-         }
        
         return (
             <SafeAreaView style={style.setPage}>
@@ -50,7 +46,7 @@ export default function ProductDetails({goTo}:ProductProps) {
                 <Text style={style.description}>
                     “Compact power bank with fast charging, high capacity, and reliable portability for all your devices
                 </Text>
-                <Cartbut setPage={setPage}/>
+                <Cartbut goTo={goTo}/>
             </View>
         </SafeAreaView>
     )

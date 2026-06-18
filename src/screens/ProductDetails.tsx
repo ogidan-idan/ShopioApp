@@ -11,11 +11,7 @@ type ProductProps={
 }
 
 export default function ProductDetails({goTo}:ProductProps) {
-    const [page, setPage] =useState("ProductDetails")
-   
-    if (page=="CheckOut"){
-        return<Checkout/>
-    }
+    
     return (
         <SafeAreaView style={style.setPage}>
             <View style={style.headerRow}>
@@ -49,7 +45,7 @@ export default function ProductDetails({goTo}:ProductProps) {
                 <Text style={style.description}>
                     A modern wristwatch combining elegance, durability, and accurate performance.
                 </Text>
-                <Cartbut setPage={setPage}/>
+                <Cartbut goTo={goTo}/>
             </View>
         </SafeAreaView>
     )

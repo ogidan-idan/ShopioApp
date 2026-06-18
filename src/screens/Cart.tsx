@@ -1,11 +1,17 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet } from "react-native";
+import { COLORS } from "../constants/Colors";
+import Checkout from "./CheckOut";
 
-export default function Cart() {
+type cartProps={
+    goTo:(tab:string)=>void
+}
+
+export default function Cart({goTo}:cartProps) {
     return (
         <SafeAreaView style={style.setPage}>
             <View style={style.headerRow}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>goTo("Categories") }>
                     <Image source={require("../../assets/icons8-less-than-50.png")} style={style.goback} />
                 </TouchableOpacity>
                 <Text style={style.headerTitle}>My Cart</Text>
@@ -44,7 +50,7 @@ export default function Cart() {
                     <Text style={style.totalLabel}>Total:</Text>
                     <Text style={style.totalValue}>$66.76</Text>
                 </View>
-                <TouchableOpacity style={style.checkoutButton}>
+                <TouchableOpacity onPress={()=>goTo("Checkout")} style={style.checkoutButton}>
                     <Text style={style.checkoutText}>Checkout</Text>
                 </TouchableOpacity>
             </View>
@@ -70,11 +76,11 @@ export const style = StyleSheet.create({
     qtyButton: { borderWidth: 1, borderColor: "#ccc", borderRadius: 5, paddingHorizontal: 10, paddingVertical: 2 },
     qtyValue: { marginHorizontal: 10, fontSize: 16 },
 
-    footer: { marginTop: "auto", paddingVertical: 20,marginBottom:30 },
+    footer: { marginTop: "auto", paddingVertical: 20,marginBottom:70 },
     totalRow: { flexDirection: "row", justifyContent: "space-between", marginBottom: 15 },
     totalLabel: { fontSize: 20, fontWeight: "bold" },
     totalValue: { fontSize: 20, fontWeight: "bold", color: "#333" },
 
-    checkoutButton: { backgroundColor: "#007bff", padding: 15, borderRadius: 10 },
+    checkoutButton: { backgroundColor: COLORS.primary, padding: 15, borderRadius: 10 },
     checkoutText: { color: "#fff", textAlign: "center", fontSize: 18, fontWeight: "bold" }
 })

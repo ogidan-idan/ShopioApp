@@ -1,7 +1,11 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 
-export default function OrderConfirmation() {
+type ConfirmationProps={
+    goTo:(tab:string)=>void
+}
+
+export default function OrderConfirmation({goTo}:ConfirmationProps) {
     return (
         <SafeAreaView style={style.setPage}>
             {/* Success Icon */}
@@ -25,7 +29,7 @@ export default function OrderConfirmation() {
             </View>
 
             {/* Continue Button */}
-            <TouchableOpacity style={style.continueButton}>
+            <TouchableOpacity onPress={()=>goTo("Categories")} style={style.continueButton}>
                 <Text style={style.continueText}>Continue Shopping</Text>
             </TouchableOpacity>
         </SafeAreaView>

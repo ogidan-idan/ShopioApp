@@ -12,10 +12,7 @@ type ProductProps={
 }
 
 export default function ProductDetails({goTo}:ProductProps) {
-     const [page, setPage] =useState("ProductDetails")
-        if (page=="CheckOut"){
-               return<Checkout/>
-           }
+
         return (
             <SafeAreaView style={style.setPage}>
                 <View style={style.headerRow}>
@@ -49,7 +46,7 @@ export default function ProductDetails({goTo}:ProductProps) {
                 <Text style={style.description}>
                     “A stylish, durable bag with spacious compartments, secure closure, and versatile design for everyday use.
                 </Text>
-                <Cartbut setPage={setPage}/>
+                <Cartbut goTo={goTo}/>
             </View>
         </SafeAreaView>
     )

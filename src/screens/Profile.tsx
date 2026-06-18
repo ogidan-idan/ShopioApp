@@ -1,7 +1,13 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView } from "react-native";
+import { useState } from "react";
 
-export default function Profile() {
+type ProfileProps={
+    goTo:(tab:string)=> void
+}
+
+export default function Profile({goTo}:ProfileProps) {
+   
     return (
         <SafeAreaView style={style.setPage}>
             {/* Header */}
@@ -20,25 +26,25 @@ export default function Profile() {
                 </View>
 
                 {/* Menu Options */}
-                <TouchableOpacity style={style.menuItem}>
+                <TouchableOpacity onPress={()=>alert("Not available at the moment")} style={style.menuItem}>
                     <Text style={style.menuText}>My Orders</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={style.menuItem}>
+                <TouchableOpacity onPress={()=>alert("Not available at the moment")} style={style.menuItem}>
                     <Text style={style.menuText}>My Addresses</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={style.menuItem}>
+                <TouchableOpacity onPress={()=>alert("Not available at the moment")} style={style.menuItem}>
                     <Text style={style.menuText}>Wishlist</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={style.menuItem}>
+                <TouchableOpacity onPress={()=> goTo("Notifications")} style={style.menuItem}>
                     <Text style={style.menuText}>Notifications</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={style.menuItem}>
+                <TouchableOpacity onPress={()=>alert("Not available at the moment")} style={style.menuItem}>
                     <Text style={style.menuText}>Settings</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={style.menuItem}>
+                <TouchableOpacity onPress={()=>alert("Not available at the moment")} style={style.menuItem}>
                     <Text style={style.menuText}>Help & Support</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={style.menuItem}>
+                <TouchableOpacity onPress={()=> goTo("Login")} style={style.menuItem}>
                     <Text style={[style.menuText, { color: "red" }]}>Logout</Text>
                 </TouchableOpacity>
             </ScrollView>
